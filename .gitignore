@@ -1,0 +1,8 @@
+/output
+/.psc*
+/.purs*
+
+dist/
+.spago/
+bower_components/
+node_modules/

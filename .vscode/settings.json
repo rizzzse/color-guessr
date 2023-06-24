@@ -1,0 +1,8 @@
+{
+    "purescript.addNpmPath": true,
+    "purescript.formatter": "purs-tidy",
+    "[purescript]": {
+        "editor.defaultFormatter": "nwolverson.ide-purescript",
+        "editor.formatOnSave": true,
+    },
+}
