@@ -1,0 +1,11 @@
+@use "ColorPicker/HSV.scss";
+@use "ColorPicker/HSVPicker.scss";
+@use "ColorPicker/HueWheel.scss";
+
+*, ::before, ::after {
+  box-sizing: content-box;
+}
+
+body {
+  background-color: gray;
+}

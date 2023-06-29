@@ -1,0 +1,26 @@
+
+.sv-palette {
+  $sv-palette: linear-gradient(0, #000, transparent),
+      linear-gradient(90deg, #fff, transparent);
+  background-image: $sv-palette;
+  background-color: hsl(var(--hue), 100%, 50%);
+  width: 32em;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+
+.sv-pointer {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  &::before {
+    content: "";
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 10%;
+    height: 10%;
+    border: 2px solid white;
+    border-radius: 100%;
+    background-color: var(--bg-color);
+  }
+}

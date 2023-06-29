@@ -1,0 +1,12 @@
+
+.hsv-color-picker {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.hue-info {
+  text-align: center;
+  font-size: x-large;
+  padding: 2em;
+  height: calc(100% - 2em * 2);
+}
