@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "spago bundle-app --to dist/index.js --then 'vite build'",
+    "build": "spago bundle-app --to dist/index.js --then 'vite build --base=/color-guessr/'",
     "predev": "> dist/index.js",
     "dev": "spago build --watch --source-maps",
     "test": "spago test"
