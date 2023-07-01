@@ -6,6 +6,7 @@ import Prelude
 
 import ColorGuessr.Page as Page
 import ColorGuessr.Page.Guess (guessPage)
+import ColorGuessr.Page.GuessResult (guessResultPage)
 import Effect.Aff (Aff)
 import Effect.Class (class MonadEffect)
 import Halogen as H
@@ -22,14 +23,17 @@ appRoot = H.mkComponent
       { handleAction = handleAction }
   }
 
-type ChildSlots = (guessPage :: forall query. H.Slot query Page.Page Unit)
+type ChildSlots =
+  ( guessPage :: forall query. H.Slot query Page.Page Unit
+  , guessResultPage :: forall query. H.Slot query Page.Page Unit
+  )
 
 render :: State -> HH.ComponentHTML Page.Page ChildSlots Aff
 render { page } = case page of
   Page.Guess ->
     HH.slot (Proxy :: _ "guessPage") unit guessPage unit identity
   Page.GuessResult correct answer ->
-    HH.div_ []
+    HH.slot (Proxy :: _ "guessResultPage") unit guessResultPage { correct, answer } identity
 
 handleAction
   :: forall slots message m
