@@ -32,11 +32,14 @@ svPalette ref h s v = HH.div
   ]
   [ HH.div
       [ cls "sv-pointer"
-      , HP.style $ "translate: "
-          <> show (s * 100.0)
-          <> "% "
-          <> show ((1.0 - v) * 100.0)
-          <> "%"
+      , HP.style $ joinWith "; "
+          [ "translate: "
+              <> show (s * 100.0)
+              <> "% "
+              <> show ((1.0 - v) * 100.0)
+              <> "%"
+          , "color: " <> if v < 0.5 then "white" else "black"
+          ]
       ]
       empty
   ]

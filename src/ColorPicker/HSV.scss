@@ -2,6 +2,12 @@
 .hsv-color-picker {
   display: flex;
   justify-content: space-evenly;
+  gap: 2em;
+  overflow: hidden;
+  padding: 2em;
+  > .hue-wheel {
+    flex: 0 0 auto;
+  }
 }
 
 .hue-info {

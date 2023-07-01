@@ -17,9 +17,11 @@
     content: "";
     position: absolute;
     transform: translate(-50%,-50%);
-    width: 10%;
-    height: 10%;
-    border: 2px solid white;
+    $size: 3em;
+    width: $size;
+    height: $size;
+    transition: color 0.5s;
+    border: 2px solid currentcolor;
     border-radius: 100%;
     background-color: var(--bg-color);
   }
