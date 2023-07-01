@@ -1,3 +1,4 @@
+@use "ColorGuessr/Page/Guess.scss";
 @use "ColorPicker/HSV.scss";
 @use "ColorPicker/HSVPicker.scss";
 @use "ColorPicker/HueWheel.scss";
@@ -8,4 +9,5 @@
 
 body {
   background-color: gray;
+  font-family: 'Ubuntu', sans-serif;
 }

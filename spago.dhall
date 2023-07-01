@@ -13,6 +13,7 @@
   , "newtype"
   , "numbers"
   , "prelude"
+  , "random"
   , "strings"
   , "transformers"
   , "web-dom"
